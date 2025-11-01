@@ -37,7 +37,7 @@ public class RockPaperScissor {
     static void menu(Scanner sc){
         while(true){
             System.out.println("Welcome to the menu");
-            System.out.printf("Please choose:\n1.Start Game\n2.Show Score\n3.Exit\n");
+            System.out.printf("Please choose:\n1.Start Game\n2.Show Score\n3.Score Reset\n4.Exit\n");
             int a=sc.nextInt();
             switch(a){
             case 1:
@@ -54,6 +54,9 @@ public class RockPaperScissor {
                 System.out.println("Games Draw="+draws);
                 break;
             case 3:
+                won=lost=draws=0;
+                break;
+            case 4:
                 System.out.println("Thank you for playing the game exiting now.");
                 return;
             default:
